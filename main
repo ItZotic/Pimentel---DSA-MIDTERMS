@@ -236,6 +236,7 @@ int main()
             break;
         case 8:
             cout << "Exiting program. Goodbye! ^^ \n";
+            cout << "=== Code Execution Finished ===";
             return 0;
         default:
             cout << "Invalid choice.\n";
