@@ -1,10 +1,10 @@
 #include <iostream>
-#include <string> // Include string library for using string type
+#include <string>
 using namespace std;
 
 struct node
 {
-    string data; // Change data type to string
+    string data; 
     node *next;
 };
 
@@ -19,7 +19,6 @@ public:
         head = NULL;
         tail = NULL;
     }
-
     void delete_first()
     {
         if (head == NULL)
@@ -32,7 +31,6 @@ public:
         head = head->next;
         delete temp;
     }
-
     void delete_last()
     {
         if (head == NULL)
@@ -63,7 +61,6 @@ public:
             previous->next = NULL;
         delete current;
     }
-
     void delete_position(int pos)
     {
         if (head == NULL)
@@ -97,7 +94,6 @@ public:
 
         delete current;
     }
-
     void insert_start(string value)
     {
         node *temp = new node;
@@ -108,7 +104,6 @@ public:
         if (tail == NULL)
             tail = head;
     }
-
     void insert_last(string value)
     {
         node *temp = new node;
@@ -126,7 +121,6 @@ public:
             tail = temp;
         }
     }
-
     void insert_position(int pos, string value)
     {
         node *temp = new node;
@@ -171,7 +165,6 @@ public:
         if (previous == tail)
             tail = temp;
     }
-
     void display()
     {
         node *temp = head;
@@ -196,7 +189,7 @@ int main()
         cout << "\n---------------------\n";
         cout << "Linked List Operations\n";
         cout << "---------------------\n";
-        cout << "     MENU: \n";
+        cout << "========MENU========\n";
         cout << "1. Insert: beginning\n";
         cout << "2. Insert: end\n";
         cout << "3. Insert: position\n";
@@ -205,6 +198,7 @@ int main()
         cout << "6. Delete: position\n";
         cout << "7. Display!\n";
         cout << "8. Exit\n";
+        cout << "====================\n";
         cout << "Enter your choice: ";
         cin >> choice;
 
